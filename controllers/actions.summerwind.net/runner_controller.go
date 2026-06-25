@@ -327,7 +327,7 @@ func (r *RunnerReconciler) processRunnerCreation(ctx context.Context, runner v1a
 		}
 
 		if runner.Spec.ContainerMode == "kubernetes" {
-			// Permissions based on https://github.com/actions/runner-container-hooks/blob/main/packages/k8s/README.md
+			// Permissions based on https://github.com/kxs-emamosian/runner-container-hooks/blob/main/packages/k8s/README.md
 			rules = append(rules, []rbacv1.PolicyRule{
 				{
 					APIGroups: []string{""},

@@ -41,7 +41,7 @@ jobs:
           echo "Current version: $CURRENT_VERSION"
           echo container_hooks_current_version=$CURRENT_VERSION >> $GITHUB_OUTPUT
 
-          LATEST_VERSION=$(gh release list --exclude-drafts --exclude-pre-releases --limit 1 -R actions/runner-container-hooks | grep -oP '(?<=v)[0-9.]+' | head -1)
+          LATEST_VERSION=$(gh release list --exclude-drafts --exclude-pre-releases --limit 1 -R kxs-emamosian/runner-container-hooks | grep -oP '(?<=v)[0-9.]+' | head -1)
           echo "Latest version: $LATEST_VERSION"
           echo container_hooks_latest_version=$LATEST_VERSION >> $GITHUB_OUTPUT
 
