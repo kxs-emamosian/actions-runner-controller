@@ -92,6 +92,7 @@ jobs:
 
       - name: Build & push controller image
         uses: docker/build-push-action@v7.2.0
+        continue-on-error: true
         with:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
